@@ -45,11 +45,15 @@
                     ProdutosDao dao = new ProdutosDao();
                     List<Produtos> prod =dao.getList();
                     for (int i = 0; i < prod.size(); i++) {
+                        String a, b;
+                        a = prod.get(i).getFoto();
+                      
+                       
                 %>    
                     <div class="col-sm-4">
-                        <img src="<%=prod.get(i).getFoto()%>" style=" height:200px"/>
+                        <img src="<%= a %>" id = "idImg" alt="Imagem pode não estar salva" style=" height:200px"/>
                         <br>
-                        <h4>Nome:<%= prod.get(i).getTipo()%></h4>
+                        <h4>Nome:<%=prod.get(i).getTipo()%></h4>
                         Preço:<%=prod.get(i).getPreco()%>
                         <button onclick="window.location.href = 'Pedidos.jsp';" type="button" class="btn btn-primary">Pedir</button>
                     </div>

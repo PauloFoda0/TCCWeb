@@ -41,7 +41,7 @@
             <div class="col-xs-5 selectContainer">
                 <select class="form-control" name="PedidoProduto">
                     <option value="">Escolha o Produto desejado</option>
-                    <option value="AguaSanitaria">Água Sanitária</option>
+                    <option value="Agua">Água Sanitária</option>
                     <option value="Alcool">Alcool</option>
                     <option value="Amaciante">Amaciante</option>
                     <option value="Cloro">Cloro</option>

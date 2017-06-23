@@ -50,7 +50,8 @@ public class CadastroPedido extends HttpServlet {
         pedido.setProduto(produto);
         pedido.setQuantidade(quantia);
         pedido.setPreco(valor);
-
+        pedido.setEndereco(endereco);
+        
         dao.InserePedido(pedido);
 
         RequestDispatcher rd;
