@@ -1,12 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Servlets;
 
 import Model.Produtos;
 import java.io.IOException;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -28,11 +24,14 @@ public class TelaPrincipal extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        Produtos prod=new Produtos();
+        /*Produtos prod=new Produtos();
         String tipo=prod.getTipo();
         Double preco=prod.getPreco();
-        String foto=prod.getFoto();
+        String foto=prod.getFoto();*/
         
+        RequestDispatcher rd;
+        rd = request.getRequestDispatcher("tela-principal.jsp");
+        rd.forward(request, response);
         
     }
 

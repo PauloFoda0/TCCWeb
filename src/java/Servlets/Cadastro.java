@@ -1,8 +1,3 @@
- /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Servlets;
 
 import DAO.UsuarioDao;
@@ -39,16 +34,15 @@ public class Cadastro extends HttpServlet {
         String senha = request.getParameter("CadastroSenha");
         String foto = "C:\\Users\\Paulo Vitor\\Documents\\NetBeansProjects\\ProdutoDeLimpeza\\web\\Imagens\\Cloro.jpg";
 
-        
-        UsuarioDao dao = new UsuarioDao();
+        /*UsuarioDao dao = new UsuarioDao();
         List<Usuario> user = FXCollections.observableArrayList(dao.getList());
         for (int i = 0; i < user.size(); i++) {
-            if (email.equals(user.get(i).getEmail())||
-                    email.isEmpty()||senha.isEmpty()){
+            if (email.equals(user.get(i).getEmail())
+                    || email.isEmpty() || senha.isEmpty()) {
                 RequestDispatcher rd;
                 rd = request.getRequestDispatcher("FalhaCad.html");
                 rd.forward(request, response);
-            } else if(i == (user.size() - 1)) {
+            } else if (i == (user.size() - 1)) {
                 Usuario usuario = new Usuario();
                 usuario.setEmail(email);
                 usuario.setSenha(Criptografia.criptografar(senha));
@@ -59,7 +53,12 @@ public class Cadastro extends HttpServlet {
                 rd = request.getRequestDispatcher("CadastroConcluido.html");
                 rd.forward(request, response);
             }
-        }
+        }*/
+
+        RequestDispatcher rd;
+        rd = request.getRequestDispatcher("cadastro-concluido.jsp");
+        rd.forward(request, response);
+
     }
 
 // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Servlets;
 
 import DAO.PedidoDao;
@@ -40,7 +35,7 @@ public class CadastroPedido extends HttpServlet {
         Double valor = Double.parseDouble(preco.trim());
         String endereco = request.getParameter("PedidoEndereco");
 
-        System.out.println("NOME " + cliente + ", PRODUTO " + produto + ""
+        /*System.out.println("NOME " + cliente + ", PRODUTO " + produto + ""
                 + " QUANTIDADE: " + quantia + " VALOR: " + valor + "ENDERECO " + endereco);
 
         PedidoDao dao = new PedidoDao();
@@ -52,11 +47,12 @@ public class CadastroPedido extends HttpServlet {
         pedido.setPreco(valor);
         pedido.setEndereco(endereco);
         
-        dao.InserePedido(pedido);
+        dao.InserePedido(pedido);*/
 
         RequestDispatcher rd;
-        rd = request.getRequestDispatcher("PedidoConcluido.html");
+        rd = request.getRequestDispatcher("pedido-concluido.jsp");
         rd.forward(request, response);
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -7,15 +7,15 @@ and open the template in the editor.
 <html>
     <head>
          <title>Error LP</title>
-        <link rel='shortcut icon' href="Imagens/icon.jpg" />
+        <link rel='shortcut icon' href="imagens/icon.jpg" />
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
 
     </head>
-    <body background="Imagens/fundo1.jpg">
+    <body background="imagens/fundo1.jpg">
     <center>        
-        <img src="Imagens/icon.jpg" alt="Nao suportado" class="img-circle" width="483">
+        <img src="imagens/icon.jpg" alt="Nao suportado" class="img-circle" width="483">
         <br><br><br><br><br>
         <b><font color="#FF0000" size="8">NÃO FOI POSSÍVEL REALIZAR O CADASTRO</font></b>
         <br><br><br>

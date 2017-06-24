@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Servlets;
 
 import DAO.UsuarioDao;
@@ -37,22 +32,26 @@ public class Login extends HttpServlet {
         String email = request.getParameter("LoginEmail");
         String senha = request.getParameter("LoginSenha");
 
-        
-        UsuarioDao dao=new UsuarioDao();
-        List<Usuario> user=FXCollections.observableArrayList(dao.getList());
-        for(int i=0; i< user.size(); i++){
-            if(email.equals(user.get(i).getEmail())){
-                if(Criptografia.criptografar(senha).equals(user.get(i).getSenha())){
+        /*UsuarioDao dao = new UsuarioDao();
+        List<Usuario> user = FXCollections.observableArrayList(dao.getList());
+        for (int i = 0; i < user.size(); i++) {
+            if (email.equals(user.get(i).getEmail())) {
+                if (Criptografia.criptografar(senha).equals(user.get(i).getSenha())) {
                     RequestDispatcher rd;
-                    rd=request.getRequestDispatcher("TelaPrincipal.jsp");                    
+                    rd = request.getRequestDispatcher("TelaPrincipal.jsp");
                     rd.forward(request, response);
                 }
-            }else if (i + 1 == user.size()){
+            } else if (i + 1 == user.size()) {
                 RequestDispatcher rd;
-                rd=request.getRequestDispatcher("erroLogin.html");
+                rd = request.getRequestDispatcher("erroLogin.html");
                 rd.forward(request, response);
             }
-        }
+        }*/
+
+        RequestDispatcher rd;
+        rd = request.getRequestDispatcher("tela-principal.jsp");
+        rd.forward(request, response);
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
